@@ -46,6 +46,13 @@ To train a low-res `lego` NeRF:
 ```
 python run_nerf.py --config configs/lego.txt
 ```
+
+or if the user cannot obtain the final video or image, try this command:
+
+```
+python run_nerf.py --config configs/lego.txt --i_video 1000
+```
+
 After training for 100k iterations (~4 hours on a single 2080 Ti), you can find the following video at `logs/lego_test/lego_test_spiral_100000_rgb.mp4`.
 
 ![](https://user-images.githubusercontent.com/7057863/78473103-9353b300-7770-11ea-98ed-6ba2d877b62c.gif)
