@@ -20,6 +20,8 @@ from load_LINEMOD import load_LINEMOD_data
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("device: ", device)
+
 np.random.seed(0)
 DEBUG = False
 
@@ -698,7 +700,8 @@ def train():
         rays_rgb = torch.Tensor(rays_rgb).to(device)
 
 
-    N_iters = 200000 + 1
+    N_iters = 1000 + 1    # for demo test, only check whether the code can function or not
+    # N_iters = 200000 + 1
     print('Begin')
     print('TRAIN views are', i_train)
     print('TEST views are', i_test)
